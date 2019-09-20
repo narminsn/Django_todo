@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto">
+            
+                <form method="POST">
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="email">{{field.label}}</label>
+                        {{field}}
+                       
+                    </div>
+                   {% endfor %}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                   
+                </form>
+                <br>
+                
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
